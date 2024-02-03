@@ -7,6 +7,7 @@ import {
 } from "@clerk/nextjs";
 import { SearchInput } from "./search-input";
 import { InviteButton } from "./invite-button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const Navbar = () => {
   const { organization } = useOrganization();
@@ -40,9 +41,11 @@ const Navbar = () => {
           }}
         />
       </div>
+
       {organization && <InviteButton />}
 
       <UserButton />
+      <ModeToggle />
     </div>
   );
 };
